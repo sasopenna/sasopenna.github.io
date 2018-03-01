@@ -58,11 +58,12 @@ class Game2048 {
         cell.innerHTML = (this.grid[i][j] == 0) ? "" : this.grid[i][j];
 
         let search = this.grid[i][j].toString();
-        let size = cellOptions[search].size;
+        let size = 0;
         if(this.grid[i][j] > 2048) {
           size -= (search.length - 4) * 2;
           search = "-1";
         }
+        size += cellOptions[search].size;
         cell.style.color = cellOptions[search].color;
         cell.style.background = cellOptions[search].bgcolor;
         cell.style.fontSize = size;
