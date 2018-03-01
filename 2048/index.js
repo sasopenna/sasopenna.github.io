@@ -1,8 +1,3 @@
-let agrid = blankGrid(4, 4);
-
-createHTMLgrid('table_grid', agrid);
-
-for (let x = 0; x < 3; x++) {
-  addNumber(agrid);
-}
-updateHTMLgrid("table_grid", agrid);
+let game = new Game2048("table_grid", 4, 4);
+game.setKeys(87, 83, 65, 68);
+Game2048.startKeyListener(game);
