@@ -47,7 +47,7 @@ getAuth[1].addEventListener("keydown", function(e) {
   document.getElementById("p2_birth").innerHTML = "";
   document.getElementById("p2_email").innerHTML = "";
   document.getElementById("p2_name").innerHTML = "Send Infos to this Account: ";
-  document.getElementById("p2_img").src = "noimg.jpg";
+  document.getElementById("p2_img").src = "img/noimg.jpg";
 
   percentDiv[1].innerHTML = "";
   percentDiv[1].style.width = "0%";
@@ -78,7 +78,7 @@ getAuth[1].addEventListener("keydown", function(e) {
     document.getElementById("p2_birth").innerHTML = "Birthday: " + user.birthdate;
     document.getElementById("p2_email").innerHTML = "E-mail: " + user.email;
     document.getElementById("p2_name").innerHTML = 'Send Infos to this Account: <a href="' + user.external_urls.spotify + '">' + user.display_name + '</a>';
-    document.getElementById("p2_img").src = (user.images.length) ? user.images[0].url : "noimg.jpg";
+    document.getElementById("p2_img").src = (user.images.length) ? user.images[0].url : "img/noimg.jpg";
 
     otheruser = true;
     started = false;
@@ -112,7 +112,7 @@ function getStats(error, data) {
   document.getElementById("p1_birth").innerHTML = "";
   document.getElementById("p1_email").innerHTML = "";
   document.getElementById("p1_name").innerHTML = "";
-  document.getElementById("p1_img").src = "noimg.jpg";
+  document.getElementById("p1_img").src = "img/noimg.jpg";
 
   user_array = data;
   user_array.total = 0;
@@ -122,7 +122,7 @@ function getStats(error, data) {
   document.getElementById("p1_birth").innerHTML = "Birthday: " + user_array.birthdate;
   document.getElementById("p1_email").innerHTML = "E-mail: " + user_array.email;
   document.getElementById("p1_name").innerHTML = '<a href="' + user_array.external_urls.spotify + '">' + user_array.display_name + '</a>';
-  document.getElementById("p1_img").src = (user_array.images.length) ? user_array.images[0].url : "noimg.jpg";
+  document.getElementById("p1_img").src = (user_array.images.length) ? user_array.images[0].url : "img/noimg.jpg";
 
   startCheck(1);
 }
