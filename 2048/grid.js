@@ -151,13 +151,11 @@ class Game2048 {
 
     if(dir % 2 == 0) {
       for(let i = 0; i < this.rows; i++) {
-        if(dir == 0) array = this.grid[i];
-        else if(dir == 2) {
-          array = [];
-          for(let j = this.cols - 1; j >= 0; j--) {
-            array.push(this.grid[i][j]);
-          }
-       }
+        array = [];
+        for(let index = 0; index < this.cols; index++) {
+          let j = (dir == 2) ? this.cols - index - 1 : index;
+          array.push(this.grid[i][j]);
+        }
 
         array = Game2048.moveArray(array);
         for(let j = 0; j < this.cols; j++) {
@@ -167,15 +165,9 @@ class Game2048 {
     } else {
       for(let j = 0; j < this.cols; j++) {
         array = [];
-        if(dir == 1) {
-          for(let i = 0; i < this.rows; i++) {
-            array.push(this.grid[i][j]);
-          }
-
-        } else if(dir == 3) {
-          for(let i = this.rows - 1; i >= 0; i--) {
-            array.push(this.grid[i][j]);
-          }
+        for(let index = 0; index < this.rows; index++) {
+          let i = (dir == 3) ? this.rows - index - 1 : index;
+          array.push(this.grid[i][j]);
         }
 
         array = Game2048.moveArray(array);
@@ -184,8 +176,6 @@ class Game2048 {
         }
       }
     }
-
-    this.addNumber();
   }
 
   getIndexKey(d) {
