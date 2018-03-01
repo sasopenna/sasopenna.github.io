@@ -59,14 +59,15 @@ let updateHTMLgrid = (table_id, _grid) => {
       }
       cell.innerHTML = (_grid[i][j] == 0) ? "" : _grid[i][j];
 
-      let search = "" + _grid[i][j];
+      let search = _grid[i][j].toString();
+      let size = cellOptions[search].size;
       if(_grid[i][j] > 2048) {
+        size -= (search.length - 4) * 2;
         search = "-1";
       }
       cell.style.color = cellOptions[search].color;
       cell.style.background = cellOptions[search].bgcolor;
-      cell.style.fontSize = cellOptions[search].size;
-
+      cell.style.fontSize = size;
     }
   }
 }
