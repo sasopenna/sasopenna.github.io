@@ -4,7 +4,7 @@ class Game2048 {
     this.rows = rows;
     this.cols = cols;
     this.grid = Game2048.blankGrid(rows, cols);
-    this.keys = [37, 38, 39, 40];
+    this.keys = [];
     this.started = false;
 
     this.createHTMLgrid();
@@ -196,10 +196,10 @@ class Game2048 {
   }
 
   setKeys(up, down, left, right) {
-    this.keys[0] = left;
-    this.keys[1] = up;
-    this.keys[2] = right;
-    this.keys[3] = down;
+    this.keys[0] = keyCodes[left];
+    this.keys[1] = keyCodes[up];
+    this.keys[2] = keyCodes[right];
+    this.keys[3] = keyCodes[down];
   }
 
   static startKeyListener(game) {
