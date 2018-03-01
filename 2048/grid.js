@@ -139,6 +139,7 @@ class Game2048 {
       }
     }
     this.moveNumbers(dir);
+    this.addNumber();
     this.updateHTMLgrid();
   }
 
