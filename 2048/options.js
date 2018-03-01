@@ -62,7 +62,7 @@ let cellOptions = {
   "-1": {
     size: 16,
     color: "#f9f6f2",
-    bgcolor: "3c3a32"
+    bgcolor: "#3c3a32"
   }
 }
 
