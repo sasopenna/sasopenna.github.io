@@ -50,17 +50,17 @@ let cellOptions = {
     bgcolor: "#edc850"
   },
   "1024": {
-    size: 28,
+    size: 16,
     color: "#f9f6f2",
     bgcolor: "#edc53f"
   },
   "2048": {
-    size: 28,
+    size: 16,
     color: "#f9f6f2",
     bgcolor: "#edc22e"
   },
   "-1": {
-    size: 10,
+    size: 16,
     color: "#f9f6f2",
     bgcolor: "3c3a32"
   }
