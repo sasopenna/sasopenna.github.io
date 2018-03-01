@@ -60,7 +60,7 @@ let updateHTMLgrid = (table_id, _grid) => {
       cell.innerHTML = (_grid[i][j] == 0) ? "" : _grid[i][j];
 
       let search = "" + _grid[i][j];
-      cell.style.background = cellOptions[search].color;
+      cell.style.background = cellOptions[search].bgcolor;
       cell.style.fontSize = cellOptions[search].size;
     }
   }
