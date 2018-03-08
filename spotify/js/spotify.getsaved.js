@@ -101,21 +101,21 @@ function getSaved(off) {
         case _ALBUMS:
           array[index].name = val.album.name;
           array[index].id = val.album.id;
-          array[index].img = (val.album.images[0]) ? val.album.images[0].url : "",
+          array[index].img = (val.album.images[0]) ? val.album.images[0].url : "";
           break;
         case _ARTISTS:
           array[index].name = val.name;
           array[index].id = val.id;
-          array[index].img = (val.images[0]) ? val.images[0].url : "",
+          array[index].img = (val.images[0]) ? val.images[0].url : "";
           break;
         case _PLAYLISTS:
-          array[index].name = val.name,
-          array[index].public = val.public,
-          array[index].collaborative = val.collaborative,
-          array[index].id = val.id,
-          array[index].img = (val.images[0]) ? val.images[0].url : "",
-          array[index].owner = val.owner.id,
-          array[index].tracks = (val.owner.id != user_array.id) ? [] : getTracks(val.owner.id, val.id, val.tracks.total)
+          array[index].name = val.name;
+          array[index].public = val.public;
+          array[index].collaborative = val.collaborative;
+          array[index].id = val.id;
+          array[index].img = (val.images[0]) ? val.images[0].url : "";
+          array[index].owner = val.owner.id;
+          array[index].tracks = (val.owner.id != user_array.id) ? [] : getTracks(val.owner.id, val.id, val.tracks.total);
           break;
       }
 
