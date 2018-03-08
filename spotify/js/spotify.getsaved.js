@@ -96,17 +96,17 @@ function getSaved(off) {
         case _TRACKS:
           array[index].name = val.track.name;
           array[index].id = val.track.id;
-          array[index].img = val.track.album.images[0].url;
+          array[index].img = (val.track.album.images[0]) ? val.track.album.images[0].url : "";
           break;
         case _ALBUMS:
           array[index].name = val.album.name;
           array[index].id = val.album.id;
-          array[index].img = val.album.images[0].url;
+          array[index].img = (val.album.images[0]) ? val.album.images[0].url : "",
           break;
         case _ARTISTS:
           array[index].name = val.name;
           array[index].id = val.id;
-          array[index].img = val.images[0].url;
+          array[index].img = (val.images[0]) ? val.images[0].url : "",
           break;
         case _PLAYLISTS:
           array[index].name = val.name,
