@@ -152,11 +152,16 @@ input[type="file"] {
 .upload {
   text-align:center;
   width: 200px;
+  background-color: transparent;
   border: 1px solid #1db954;
   display: inline-block;
   padding: 6px 12px;
   font-size: 8pt;
   cursor: pointer;
+}
+.upload:hover {
+  background-color: #1db954;
+  border: 1px solid #1b7135;
 }
 
 img.search {
