@@ -75,9 +75,11 @@ div.bd {
   outline: 0;
 }
 .gb {
-  text-transform: capitalize;
   padding-top: 20px;
   padding-bottom: 10px;
+}
+p {
+  text-transform: capitalize;
 }
 input {
   font-family: Roboto, Arial, sans-serif;
@@ -144,7 +146,6 @@ a.dark:hover {
   color: #124b23;
   cursor: pointer;
 }
-
 input[type="file"] {
   display: none;
 }
